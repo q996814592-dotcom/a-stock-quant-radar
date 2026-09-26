@@ -1,0 +1,12 @@
+name = "a-stock-quant-radar-v3"
+main = "worker.js"
+compatibility_date = "2026-09-25"
+
+[assets]
+directory = "./public/"
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
+
+[triggers]
+# UTC时间；工作日盘中每5分钟执行一次
+crons = ["*/5 1-7 * * 1-5"]
